@@ -6,14 +6,18 @@ import SearchBar from "./pages/SearchBar.js"
 function App() {
   
   return (
+    <div>
+    <SearchBar/>
     <div className="app">
-      <BrowserRouter>
+      
+       <BrowserRouter>
         <Routes>
         <Route path="/" element={<Books searchResults={SearchBar} />} />
           <Route path="/add" element={<Add />} />
           <Route path="/update/:id" element={<Update />} />
         </Routes>
       </BrowserRouter>
+    </div>
     </div>
   );
 }
