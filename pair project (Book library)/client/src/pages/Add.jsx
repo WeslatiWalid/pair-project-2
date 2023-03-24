@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Add = () => {
+const Add = ({refrech}) => {
   const [book, setBook] = useState({
     title: "",
     desc: "",
@@ -23,6 +23,7 @@ const Add = () => {
     try {
       await axios.post("http://localhost:8800/books", book);
       navigate("/");
+      refrech()
     } catch (err) {
       console.log(err);
       setError(true)
