@@ -12,16 +12,24 @@ function SearchBar({ books, onSearch }) {
     setSearchTerm(query);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const filteredBooks = books.filter((book) =>
+      book.title.toLowerCase().includes(searchTerm)
+    );
+    onSearch(filteredBooks);
+  };
+
   return (
-    <div>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Search..."
         value={searchTerm}
         onChange={handleSearch}
       />
-      <button>Search</button>
-    </div>
+      <button type="submit">Search</button>
+    </form>
   );
 }
 

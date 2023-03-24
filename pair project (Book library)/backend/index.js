@@ -28,6 +28,21 @@ app.get("/books", (req, res) => {
   });
 });
 
+app.get("/books/search", (req, res) => {
+  const searchQuery = req.query.q;
+  const q = "SELECT * FROM books WHERE title LIKE ? OR `desc` LIKE ?";
+  const searchValue = `%${searchQuery}%`;
+
+  db.query(q, [searchValue, searchValue], (err, data) => {
+    if (err) {
+      console.log(err);
+      return res.json(err);
+    }
+    return res.json(data);
+  });
+});
+
+
 app.post("/books", (req, res) => {
   const q = "INSERT INTO books(`title`, `desc`, `price`, `cover`) VALUES (?)";
 
