@@ -5,9 +5,44 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://thumbs.dreamstime.com/b/vector-geometric-background-can-be-used-cover-design-book-website-cd-advertising-white-abstract-texture-poster-backgrounds-150343248.jpg");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.search {
+  height: 38px;
+  margin-right: 60%;
+  width: 400px;
+  border-radius: 11px;
+  text-align: center;
+  font-size: 18px;
+  margin-right: 1px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+  
+
+.searchButton{
+  height: 42px;
+  margin-right: 60%;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  width:70px;
+  /* border: transparent; */
+  background-color: rgb(219, 83, 83);
+  font-size: 15px;
+}
+.logo {
+  font-size: 26px;
+  margin-right: auto;
+  margin-left: 10px;
+  color: #0b0b0b;
+  font-weight: bold;
+  text-decoration: underline;
 }
